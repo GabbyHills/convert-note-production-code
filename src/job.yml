@@ -1,13 +1,12 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
-code: model
+code: scr/model
 command: >-
-  python 
-  --
-  --
+  python  main.py 
+  --diabetes-csv ${{inputs.diabetes}}
 inputs:
   training_data: 
     type: uri_folder 
-    path: 
+    path: https://github.com/GabbyHills/convert-note-production-code/tree/main/experimentation/data
   reg_rate: 0.01
 environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
 compute: 
