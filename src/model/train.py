@@ -13,7 +13,7 @@ from sklearn.model_selection import train_test_split
 # define functions
 def main(args):
     # TO DO: enable autologging
-    sample_data = load_diabetes()
+    training_data = load_diabetes()
 
 
     # read data
